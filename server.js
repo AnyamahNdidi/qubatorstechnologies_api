@@ -17,7 +17,7 @@ const cors = require('cors')
 // use express middleware to posting of date
 app.use(express.json())
 // create a default route
-app.use(cors())
+app.use(cors({origin: "*"}))
 app.use("/api", require("./router/router"))
 // connect the server to a port
 app.listen(PORT, ()=>{
